@@ -1,0 +1,88 @@
+<app-cabecalho></app-cabecalho>
+
+<div class="container p-4">
+  <div class="row row-title text-center">
+    <h1>
+      Dashboard FORD
+    </h1>
+  </div>
+</div>
+
+<!-- Cartões de veículos -->
+
+<div class="container">
+  <app-cartao>
+    <div class="vendas"></div>
+    <div class="conectados"></div>
+    <div class="software"></div>
+  </app-cartao>
+</div>
+
+<div class="container">
+  <div class="text-center p-4">
+    <img class="img-fluid img-responsive rounded" src="assets/img/1-ford.png" alt="Nova Ford Ranger">
+  </div>
+</div>
+
+<div class="container">
+  <div class="row row-rodape-top justify-content-md-center">
+    <div class="col-3 border border-dark p-3">
+      Código - Vin
+      <ng-content></ng-content>
+    </div>
+    <div class="col-1 border border-dark p-3">
+      Odômetro
+      <ng-content></ng-content>
+    </div>
+    <div class="col-3 border border-dark p-3">
+      Nível de combustível
+      <ng-content></ng-content>
+    </div>
+    <div class="col-1 border border-dark p-3">
+      Status
+      <ng-content></ng-content>
+    </div>
+    <div class="col-2 border border-dark p-3">
+      Lat.
+      <ng-content></ng-content>
+    </div>
+    <div class="col-2 border border-dark p-3">
+      Long.
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row row-rodape-middle justify-content-md-center">
+    <div class="col-3 p-3">
+      XXXXXXXXXXX
+      <ng-content></ng-content>
+    </div>
+    <div class="col-1 p-3">
+      12345
+      <ng-content></ng-content>
+    </div>
+    <div class="col-3 p-3">
+      10%
+      <ng-content></ng-content>
+    </div>
+    <div class="col-1 p-3">
+      On
+      <ng-content></ng-content>
+    </div>
+    <div class="col-2 p-3">
+      -12.123456
+      <ng-content></ng-content>
+    </div>
+    <div class="col-2 p-3">
+      -10.123456
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row row-rodape-bottom pt-4">
+  </div>
+</div>

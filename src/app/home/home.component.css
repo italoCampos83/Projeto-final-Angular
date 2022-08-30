@@ -1,0 +1,8 @@
+.cartao {
+  position: relative;
+}
+
+.imagem {
+  position: absolute;
+  align-items: center;
+}

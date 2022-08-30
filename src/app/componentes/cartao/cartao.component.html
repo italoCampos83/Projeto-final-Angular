@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row g-5">
+    <div class="col col-md-3">
+      <div class="card border-secondary">
+        <div class="card-body pb-5 mb-0">
+          <h5 class="card-header text-muted text-left mb-3">Veículos</h5>
+          <select class="dropdown p-2">
+            <option value="1"> </option>
+            <option value="2">Ranger</option>
+            <option value="3">Mustang </option>
+            <option value="4">Territory</option>
+            <option value="5">Bronco Sport</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col col-md-3">
+      <div class="card border-secondary">
+        <div class="card-body">
+          <h5 class="card-header text-muted text-left">Total de Vendas</h5>
+          <p class="card-dados">
+            <ng-content select="[vendas]"></ng-content>
+          </p>
+          <p class="card-und">Und.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col col-md-3">
+      <div class="card border-secondary">
+        <div class="card-body">
+          <h5 class="card-header text-muted text-left">Conectados</h5>
+          <p class="card-dados">
+            <ng-content select="[conectados]"></ng-content>
+          </p>
+          <p class="card-und">Und.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col col-md-3">
+      <div class="card border-secondary">
+        <div class="card-body">
+          <h5 class="card-header text-muted text-left">Update Software</h5>
+          <p class="card-dados">
+            <ng-content select="[software]"></ng-content>
+          </p>
+          <p class="card-und">Und.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

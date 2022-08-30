@@ -1,0 +1,24 @@
+.dropdown {
+  font-weight: bold;
+}
+
+.col {
+  display: inline-block;
+}
+
+.card-dados {
+  color: blue;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 1em;
+}
+
+.card-und {
+  color: darkgrey;
+  margin-bottom: 0%;
+ }
+
+ .dropdown {
+  color: grey;
+  width: 100%;
+}

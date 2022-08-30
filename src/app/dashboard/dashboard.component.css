@@ -1,0 +1,28 @@
+.row-title {
+  color: rgb(4, 4, 208);
+}
+
+.vendas .conectados .software {
+  color: blue;
+  font-weight: bold;
+}
+
+.img-fluid {
+  width: 40%;
+}
+
+.row-rodape-top {
+  background-color: rgb(4, 4, 208);
+  color: white;
+  font-weight: bold;
+}
+
+.row-rodape-middle {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.row-rodape-bottom {
+  background-color: rgb(4, 4, 208);
+}
