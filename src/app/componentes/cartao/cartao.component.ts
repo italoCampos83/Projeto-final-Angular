@@ -5,7 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './cartao.component.html',
   styleUrls: ['./cartao.component.css']
 })
-export default class CartaoComponent implements OnInit {
+export class CartaoComponent implements OnInit {
 
  @Input() titulo = '';
 
