@@ -1,10 +1,10 @@
+import { CartaoComponent } from './../componentes/cartao/cartao.component';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
-import { CartaoModule } from '../componentes/cartao/cartao.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +15,8 @@ import { CartaoModule } from '../componentes/cartao/cartao.module';
     CommonModule,
     DashboardRoutingModule,
     SharedModule,
-    CartaoModule
+    FormsModule,
+    ReactiveFormsModule
   ],
  })
 export class DashboardModule { }

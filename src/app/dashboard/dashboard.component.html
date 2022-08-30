@@ -10,19 +10,60 @@
 
 <!-- Cartões de veículos -->
 
-<div class="container">
-  <app-cartao>
-    <div class="vendas"></div>
-    <div class="conectados"></div>
-    <div class="software"></div>
-  </app-cartao>
+<div class="container mt-4" *ngIf="veiculos$ | async as veiculos">
+  <div class="row">
+    <app-cartao class="col-3" [titulo]="'Veículo'">
+      <select
+        class="form-control mt-3"
+        type="number"
+        [(ngModel)]="veiculoId"
+        (ngModelChange)="setaVeiculoId(veiculoId)"
+      >
+        <option *ngFor="let veiculo of veiculos" [ngValue]="veiculo.id">
+          {{ veiculo.vehicle }}
+        </option>
+      </select>
+    </app-cartao>
+
+    <app-cartao class="col-3" [titulo]="'Total de Vendas'">
+      <h2 class="text-info" *ngIf="veiculoSelecionado; else blankSelection">
+        {{ veiculoSelecionado?.volumetotal }}
+      </h2>
+      <p>Unid.</p>
+    </app-cartao>
+
+    <app-cartao class="col-3" [titulo]="'Conectados'">
+      <h2 class="text-info" *ngIf="veiculoSelecionado; else blankSelection">
+        {{ veiculoSelecionado?.connected }}
+      </h2>
+      <p>Unid.</p>
+    </app-cartao>
+
+    <app-cartao class="col-3" [titulo]="'Update Software'">
+      <h2 class="text-info" *ngIf="veiculoSelecionado; else blankSelection">
+        {{ veiculoSelecionado?.softwareUpdates }}
+      </h2>
+      <p>Unid.</p>
+    </app-cartao>
+  </div>
 </div>
 
-<div class="container">
+<div class="container mt-2 mb-2">
+  <div class="row justify-content-center">
+    <img
+      class="col-7"
+      *ngIf="veiculoSelecionado; else blankImage"
+      src="assets/img/{{ veiculoEscolhido?.vehicle }}.png"
+      alt="Imagem do veículo escolhido"
+    />
+  </div>
+</div>
+
+<!-- <div class="container">
   <div class="text-center p-4">
     <img class="img-fluid img-responsive rounded" src="assets/img/1-ford.png" alt="Nova Ford Ranger">
   </div>
-</div>
+</div> -->
 
 <div class="container">
   <div class="row row-rodape-top justify-content-md-center">

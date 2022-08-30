@@ -1,4 +1,6 @@
-export interface Veiculo {
+export interface Veiculos extends Array<Veiculo> {}
+
+export interface Veiculo{
   id: number | string
   vehicle: string
   volumetotal: number | string
@@ -6,9 +8,6 @@ export interface Veiculo {
   softwareUpdates: number | string
 }
 
-export type Modelos = Array<Veiculo>;
-
 export interface VeiculosAPI {
-  vehicles: Modelos;
+  vehicles: Veiculos;
 }
-

@@ -1,5 +1,4 @@
-import { HttpClient } from '@angular/common/http';
-import { Modelos } from 'src/app/veiculos/veiculo.model';
+import { Veiculo } from 'src/app/veiculos/veiculo.model';
 import { Component, OnInit } from '@angular/core';
 import { VeiculosService } from '../veiculos/veiculos.service';
 
@@ -10,15 +9,21 @@ import { VeiculosService } from '../veiculos/veiculos.service';
 })
 export class DashboardComponent implements OnInit {
 
-  veiculo !: Modelos;
+  veiculos$ = this.veiculosService.getVeiculo();
+  veiculoId!: string;
+  veiculoSelecionado!: Veiculo;
 
-  constructor(private http: HttpClient,
-  private veiculosService: VeiculosService
-  ) { }
+  constructor(private veiculosService: VeiculosService) { }
 
   ngOnInit(): void {
-
   }
+
+  setaVeiculoId(id: string) {
+    this.veiculosService.getVeiculoId(id).subscribe((veiculoSelecionado) => {
+      this.veiculoSelecionado = veiculoSelecionado;
+    });
+  }
+
 
 
 }
