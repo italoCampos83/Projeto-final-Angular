@@ -15,7 +15,11 @@ export class AutenticacaoGuard implements CanLoad {
 
   canLoad(
     route: Route,
-    segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    segments: UrlSegment[]):
+    | Observable<boolean | UrlTree>
+    | Promise<boolean | UrlTree>
+    | boolean
+    | UrlTree {
     if (!this.usuarioService.estaLogado()) {
       this.router.navigate(['']);
       return false;

@@ -1,10 +1,6 @@
-.toggle.ios,
-.toggle-on.ios,
-.toggle-off.ios {
-  border-radius: 20px;
-}
-.toggle.ios .toggle-handle {
-  border-radius: 20px;
+h4 {
+  color:rgb(123, 195, 123);
+  font-weight: bold;
 }
 
 .form-group i {

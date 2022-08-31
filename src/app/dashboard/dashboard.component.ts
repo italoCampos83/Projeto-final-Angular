@@ -2,6 +2,7 @@ import { Veiculo } from 'src/app/veiculos/veiculo.model';
 import { Component, OnInit } from '@angular/core';
 import { VeiculosService } from '../veiculos/veiculos.service';
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -13,7 +14,10 @@ export class DashboardComponent implements OnInit {
   veiculoId!: string;
   veiculoSelecionado!: Veiculo;
 
-  constructor(private veiculosService: VeiculosService) { }
+
+  constructor(
+    private veiculosService: VeiculosService,
+  ) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +26,8 @@ export class DashboardComponent implements OnInit {
     this.veiculosService.getVeiculoId(id).subscribe((veiculoSelecionado) => {
       this.veiculoSelecionado = veiculoSelecionado;
     });
+
+    console.log(this.veiculoSelecionado);
   }
 
 

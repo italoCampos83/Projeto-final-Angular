@@ -1,3 +1,4 @@
+import { TabelaComponent } from './../componentes/tabela/tabela.component';
 import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -10,14 +11,15 @@ import { CartaoComponent } from '../componentes/cartao/cartao.component';
 @NgModule({
   declarations: [
     DashboardComponent,
-    CartaoComponent
+    CartaoComponent,
+    TabelaComponent,
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
  })
 export class DashboardModule { }

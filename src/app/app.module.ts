@@ -9,7 +9,6 @@ import { AutenticacaoModule } from './autenticacao/autenticacao.module';
 @NgModule({
   declarations: [
     AppComponent,
-
   ],
   imports: [
     BrowserModule,

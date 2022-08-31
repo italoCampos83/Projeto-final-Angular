@@ -1,6 +1,14 @@
 <app-cabecalho></app-cabecalho>
 
-<div class="container p-4">
+<ng-template #blankSelection><h2>-</h2></ng-template>
+
+<ng-template #blankImage>
+  <img class="img-fluid img-responsive rounded" src="assets/img/ford.png" alt="logo Ford">
+</ng-template>
+
+<ng-template #elseblock></ng-template>
+
+<div class="container mt-1">
   <div class="row row-title text-center">
     <h1>
       Dashboard FORD
@@ -10,8 +18,8 @@
 
 <!-- Cartões de veículos -->
 
-<div class="container mt-4" *ngIf="veiculos$ | async as veiculos">
-  <div class="row">
+<div class="container mt-1" *ngIf="veiculos$ | async as veiculos">
+  <div class="row g-5">
     <app-cartao class="col-3" [titulo]="'Veículo'">
       <select
         class="form-control mt-3"
@@ -26,24 +34,24 @@
     </app-cartao>
 
     <app-cartao class="col-3" [titulo]="'Total de Vendas'">
-      <h2 class="text-info" *ngIf="veiculoSelecionado; else blankSelection">
-        {{ veiculoSelecionado?.volumetotal }}
+      <h2 class="texto" *ngIf="veiculoSelecionado; else blankSelection">
+        {{ veiculoSelecionado.volumetotal }}
       </h2>
-      <p>Unid.</p>
+      <p class="text-muted">Unid.</p>
     </app-cartao>
 
     <app-cartao class="col-3" [titulo]="'Conectados'">
-      <h2 class="text-info" *ngIf="veiculoSelecionado; else blankSelection">
-        {{ veiculoSelecionado?.connected }}
+      <h2 class="texto" *ngIf="veiculoSelecionado; else blankSelection">
+        {{ veiculoSelecionado.connected }}
       </h2>
-      <p>Unid.</p>
+      <p class="text-muted">Unid.</p>
     </app-cartao>
 
     <app-cartao class="col-3" [titulo]="'Update Software'">
-      <h2 class="text-info" *ngIf="veiculoSelecionado; else blankSelection">
-        {{ veiculoSelecionado?.softwareUpdates }}
+      <h2 class="texto" *ngIf="veiculoSelecionado; else blankSelection">
+        {{ veiculoSelecionado.softwareUpdates }}
       </h2>
-      <p>Unid.</p>
+      <p class="text-muted">Unid.</p>
     </app-cartao>
   </div>
 </div>
@@ -53,7 +61,7 @@
     <img
       class="col-7"
       *ngIf="veiculoSelecionado; else blankImage"
-      src="assets/img/{{ veiculoEscolhido?.vehicle }}.png"
+      src="assets/img/{{ veiculoSelecionado?.vehicle }}.png"
       alt="Imagem do veículo escolhido"
     />
   </div>
@@ -61,69 +69,9 @@
 
 <!-- <div class="container">
   <div class="text-center p-4">
-    <img class="img-fluid img-responsive rounded" src="assets/img/1-ford.png" alt="Nova Ford Ranger">
+    <img class="img-fluid img-responsive rounded" src="assets/img/ford.png" alt="Nova Ford Ranger">
   </div>
 </div> -->
 
-<div class="container">
-  <div class="row row-rodape-top justify-content-md-center">
-    <div class="col-3 border border-dark p-3">
-      Código - Vin
-      <ng-content></ng-content>
-    </div>
-    <div class="col-1 border border-dark p-3">
-      Odômetro
-      <ng-content></ng-content>
-    </div>
-    <div class="col-3 border border-dark p-3">
-      Nível de combustível
-      <ng-content></ng-content>
-    </div>
-    <div class="col-1 border border-dark p-3">
-      Status
-      <ng-content></ng-content>
-    </div>
-    <div class="col-2 border border-dark p-3">
-      Lat.
-      <ng-content></ng-content>
-    </div>
-    <div class="col-2 border border-dark p-3">
-      Long.
-      <ng-content></ng-content>
-    </div>
-  </div>
-</div>
+<app-tabela></app-tabela>
 
-<div class="container">
-  <div class="row row-rodape-middle justify-content-md-center">
-    <div class="col-3 p-3">
-      XXXXXXXXXXX
-      <ng-content></ng-content>
-    </div>
-    <div class="col-1 p-3">
-      12345
-      <ng-content></ng-content>
-    </div>
-    <div class="col-3 p-3">
-      10%
-      <ng-content></ng-content>
-    </div>
-    <div class="col-1 p-3">
-      On
-      <ng-content></ng-content>
-    </div>
-    <div class="col-2 p-3">
-      -12.123456
-      <ng-content></ng-content>
-    </div>
-    <div class="col-2 p-3">
-      -10.123456
-      <ng-content></ng-content>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row row-rodape-bottom pt-4">
-  </div>
-</div>

@@ -23,10 +23,10 @@ export class AutenticacaoService {
     },
       { observe: 'response' }
     ).pipe(
-      tap((res) => {
-        const authToken = res.headers.get('x-access-token') ?? '';
+      tap((response) => {
+        const authToken = response.headers.get('x-access-token') ?? '';
         this.usuarioService.salvaToken(authToken);
       })
-    )
+    );
   }
 }

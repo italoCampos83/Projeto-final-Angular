@@ -1,9 +1,7 @@
 import { LoginGuard } from './autenticacao/login.guard';
 import { AutenticacaoGuard } from './autenticacao/autenticacao.guard';
-import { HomeComponent } from './home/home.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes, CanLoad } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
