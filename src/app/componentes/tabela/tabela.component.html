@@ -1,0 +1,66 @@
+<ng-template #elseblock></ng-template>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr class="bg-color">
+        <th class="width">Código - Vin</th>
+        <div>
+          <th class="width-1">Odômetro</th>
+          <th class="width-1">Nível de Combustível</th>
+          <th class="width-2">Status</th>
+          <th class="width-2">Lat.</th>
+          <th class="width-2">Long.</th>
+        </div>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <input
+            type="text"
+            style="width: 280px;"
+            [formControl]="tabelaInput"
+            [(ngModel)]="inputValue"
+          />
+        </td>
+        <div *ngIf="veiculosData$ | async as veiculosData; else elseblock">
+          <div *ngIf="inputValue.length == 20; else elseblock">
+            <td>
+              <div class="width-1" *ngFor="let veiculoData of veiculosData">
+                <span class="font-weight">{{ veiculoData.odometer }} Km</span>
+              </div>
+            </td>
+
+            <td>
+              <div class="width-1" *ngFor="let veiculoData of veiculosData">
+                <span class="font-weight">{{ veiculoData.fuelLevel }}%</span>
+              </div>
+            </td>
+            <td>
+              <div class="width-2" *ngFor="let veiculoData of veiculosData">
+                <span class="font-weight">{{ veiculoData.status }}</span>
+              </div>
+            </td>
+            <td>
+              <div class="width-2" *ngFor="let veiculoData of veiculosData">
+                <span class="font-weight">{{ veiculoData.lat }}</span>
+              </div>
+            </td>
+            <td>
+              <div class="width-2" *ngFor="let veiculoData of veiculosData">
+                <span class="font-weight">{{ veiculoData.long }}</span>
+              </div>
+            </td>
+          </div>
+        </div>
+      </tr>
+      <tr class="bg-color">
+        <td colspan="6"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+

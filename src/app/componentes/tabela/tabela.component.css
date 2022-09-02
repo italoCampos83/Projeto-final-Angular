@@ -1,0 +1,21 @@
+.bg-color{
+  background-color: rgb(40, 97, 159);
+  color: white;
+}
+
+.font-weight{
+  font-weight: 700;
+}
+
+.width{
+  width: 300px;
+}
+
+.width-1{
+  width: 200px;
+}
+
+.width-2{
+  width: 150px;
+}
+

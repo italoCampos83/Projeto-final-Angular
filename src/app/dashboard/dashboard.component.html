@@ -1,0 +1,77 @@
+<app-cabecalho></app-cabecalho>
+
+<ng-template #blankSelection><h2>-</h2></ng-template>
+
+<ng-template #blankImage>
+  <img class="img-fluid img-responsive rounded" src="assets/img/ford.png" alt="logo Ford">
+</ng-template>
+
+<ng-template #elseblock></ng-template>
+
+<div class="container mt-1">
+  <div class="row row-title text-center">
+    <h1>
+      Dashboard FORD
+    </h1>
+  </div>
+</div>
+
+<!-- Cartões de veículos -->
+
+<div class="container mt-1" *ngIf="veiculos$ | async as veiculos">
+  <div class="row g-5">
+    <app-cartao class="col-3" [titulo]="'Veículo'">
+      <select
+        class="form-control mt-3"
+        type="number"
+        [(ngModel)]="veiculoId"
+        (ngModelChange)="setaVeiculoId(veiculoId)"
+      >
+        <option *ngFor="let veiculo of veiculos" [ngValue]="veiculo.id">
+          {{ veiculo.vehicle }}
+        </option>
+      </select>
+    </app-cartao>
+
+    <app-cartao class="col-3" [titulo]="'Total de Vendas'">
+      <h2 class="texto" *ngIf="veiculoSelecionado; else blankSelection">
+        {{ veiculoSelecionado.volumetotal }}
+      </h2>
+      <p class="text-muted">Unid.</p>
+    </app-cartao>
+
+    <app-cartao class="col-3" [titulo]="'Conectados'">
+      <h2 class="texto" *ngIf="veiculoSelecionado; else blankSelection">
+        {{ veiculoSelecionado.connected }}
+      </h2>
+      <p class="text-muted">Unid.</p>
+    </app-cartao>
+
+    <app-cartao class="col-3" [titulo]="'Update Software'">
+      <h2 class="texto" *ngIf="veiculoSelecionado; else blankSelection">
+        {{ veiculoSelecionado.softwareUpdates }}
+      </h2>
+      <p class="text-muted">Unid.</p>
+    </app-cartao>
+  </div>
+</div>
+
+<div class="container mt-2 mb-2">
+  <div class="row justify-content-center">
+    <img
+      class="col-7"
+      *ngIf="veiculoSelecionado; else blankImage"
+      src="assets/img/{{ veiculoSelecionado?.vehicle }}.png"
+      alt="Imagem do veículo escolhido"
+    />
+  </div>
+</div>
+
+<!-- <div class="container">
+  <div class="text-center p-4">
+    <img class="img-fluid img-responsive rounded" src="assets/img/ford.png" alt="Nova Ford Ranger">
+  </div>
+</div> -->
+
+<app-tabela></app-tabela>
+

@@ -1,0 +1,12 @@
+.row-title {
+  color: rgb(4, 4, 208);
+}
+
+.texto {
+  color: rgba(0, 136, 255, 0.753);
+  font-weight: bold;
+}
+
+.img-fluid {
+  width: 40%;
+}

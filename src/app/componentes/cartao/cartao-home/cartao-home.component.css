@@ -1,0 +1,9 @@
+.col {
+  opacity: 0.9;
+}
+
+.card-dados {
+  color:rgb(123, 195, 123);
+  font-weight: bold;
+  padding-left: 15px;
+}
