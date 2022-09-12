@@ -1,4 +1,4 @@
-import { UsuarioService } from './usuario/usuario.service';
+import { UsuarioService } from '../componentes/usuario/usuario.service';
 import { Injectable } from '@angular/core';
 import { CanLoad, Route, Router, UrlSegment, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';

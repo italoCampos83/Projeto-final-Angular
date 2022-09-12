@@ -1,4 +1,4 @@
-import { VeiculosDadosService } from './../../veiculos/veiculos-dados.service';
+import { VeiculosDadosService } from '../../veiculos/veiculos-dados.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { filter, distinctUntilChanged, switchMap } from 'rxjs';

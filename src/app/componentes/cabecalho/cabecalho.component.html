@@ -2,7 +2,7 @@
   <nav class="navbar navbar-light bg-white">
     <a class="navbar-brand">
       <i
-        class="fa fa-bars mr-2"
+        class="fa fa-bars fa-1x"
         (click)="menu.abreMenu()"
         (keyup.space)="menu.abreMenu()"
       >
@@ -24,9 +24,7 @@
 
     <div *ngIf="user$ | async as user">
       <div *ngIf="user.name; else login">
-        <i class="fa fa-user-circle mr-1" (click)="logout()"></i>
-        <!-- <a class="mr-1">{{ user.name }}</a>
-        <a class="logout" (click)="logout()">Logout</a> -->
+        <i class="fa fa-user-circle-o fa-2x" (click)="logout()"></i>
       </div>
     </div>
   </nav>

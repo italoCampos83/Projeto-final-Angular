@@ -1,9 +1,11 @@
-<app-cabecalho></app-cabecalho>
+<header>
+  <app-cabecalho></app-cabecalho>
+</header>
 
 <ng-template #blankSelection><h2>-</h2></ng-template>
 
 <ng-template #blankImage>
-  <img class="img-fluid img-responsive rounded" src="assets/img/ford.png" alt="logo Ford">
+  <img class="img-fluid img-responsive rounded" src="assets/img/Mustang.png" alt="logo Ford">
 </ng-template>
 
 <ng-template #elseblock></ng-template>
@@ -16,7 +18,7 @@
   </div>
 </div>
 
-<!-- Cartões de veículos -->
+<!-- vehicle card -->
 
 <div class="container mt-1" *ngIf="veiculos$ | async as veiculos">
   <div class="row g-5">
@@ -67,11 +69,6 @@
   </div>
 </div>
 
-<!-- <div class="container">
-  <div class="text-center p-4">
-    <img class="img-fluid img-responsive rounded" src="assets/img/ford.png" alt="Nova Ford Ranger">
-  </div>
-</div> -->
-
 <app-tabela></app-tabela>
 
+<footer></footer>

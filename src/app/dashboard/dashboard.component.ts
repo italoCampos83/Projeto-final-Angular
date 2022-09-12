@@ -1,4 +1,4 @@
-import { Veiculo } from 'src/app/veiculos/veiculo.model';
+import { Veiculo } from 'src/app/model/veiculo.model';
 import { Component, OnInit } from '@angular/core';
 import { VeiculosService } from '../veiculos/veiculos.service';
 

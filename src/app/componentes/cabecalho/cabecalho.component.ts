@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { UsuarioService } from './../../autenticacao/usuario/usuario.service';
+import { UsuarioService } from '../usuario/usuario.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -20,7 +20,7 @@ export class CabecalhoComponent implements OnInit {
     // throw new Error('Method not implemented.');
   }
 
-  logout() {
+  public logout() {
     this.usuarioService.logout();
     this.router.navigate(['']);
   }

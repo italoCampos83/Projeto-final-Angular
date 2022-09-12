@@ -1,6 +1,6 @@
 import { pluck } from 'rxjs';
-import { environment } from './../../environments/environment.prod';
-import { Veiculo, VeiculosAPI } from 'src/app/veiculos/veiculo.model';
+import { environment } from '../../environments/environment.prod';
+import { Veiculo, VeiculosAPI } from 'src/app/model/veiculo.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 

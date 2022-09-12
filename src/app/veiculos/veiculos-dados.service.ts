@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { VeiculosDataAPI } from './veiculos-dados';
+import { VeiculosDataAPI } from '../model/veiculos-dados';
 import { pluck } from 'rxjs';
 
 const API = environment.apiURL;
